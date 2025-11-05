@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'timetable_screen.dart';
+import 'about_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,11 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
         ),
       ),
-      home: const TimetableScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const TimetableScreen(),
+        '/about': (context) => const AboutScreen(),
+      },
     );
   }
 }

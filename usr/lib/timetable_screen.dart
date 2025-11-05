@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'data/mock_data.dart';
 import 'models/timetable_entry.dart';
 import 'widgets/timetable_card.dart';
+import 'widgets/app_drawer.dart';
 
 class TimetableScreen extends StatelessWidget {
   const TimetableScreen({Key? key}) : super(key: key);
@@ -25,6 +26,7 @@ class TimetableScreen extends StatelessWidget {
             ],
           ),
         ),
+        drawer: const AppDrawer(),
         body: TabBarView(
           children: [
             _buildDayView(MockData.monday),
